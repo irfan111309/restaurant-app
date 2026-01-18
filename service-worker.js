@@ -1,4 +1,4 @@
-const CACHE_NAME = "restaurant-billing-v2";
+const CACHE_NAME = "restaurant-billing-v3";
 
 const FILES_TO_CACHE = [
   "./",
@@ -10,23 +10,23 @@ const FILES_TO_CACHE = [
 
   "./images/biriyani.jpg",
   "./images/chapati.jpg",
-  "./images/chicken lollipop.jpg",
+  "./images/chicken-lollipop.jpg",
   "./images/coffee.jpg",
   "./images/dosa.jpg",
-  "./images/egg parotta.jpg",
+  "./images/egg-parotta.jpg",
   "./images/friedrice.jpg",
-  "./images/half boil.jpg",
+  "./images/half-boil.jpg",
   "./images/idiyappam.jpg",
   "./images/idli.jpg",
   "./images/meals.jpg",
   "./images/omblete.jpg",
-  "./images/onion dosa.jpg",
+  "./images/onion-dosa.jpg",
   "./images/parotta.jpg",
-  "./images/pepper chicken.jpg",
+  "./images/pepper-chicken.jpg",
   "./images/poori.jpg",
   "./images/tea.jpg",
-  "./images/vada sambar.jpg",
-  "./images/chicken tandoori.jpg",
+  "./images/vada-sambar.jpg",
+  "./images/chicken-tandoori.jpg",
   "./images/logo.png",
 
 ];
