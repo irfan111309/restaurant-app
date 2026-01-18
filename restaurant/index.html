@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff6b00">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a2540">
+<link rel="apple-touch-icon" href="logo.png">
+
+</head>
+<body>
+<header class="site-header">
+  <img src="images/logo.png" alt="Shop Logo" class="site-logo">
+  <h1 class="site-title">IRFAN RESTAURANT</h1>
+</header>
+
+<h1 class="title">Restaurant Menu</h1>
+
+<div class="menu-container">
+
+  <!-- ================= BREAKFAST ================= -->
+  <div class="menu-section">
+    <h2>Breakfast</h2>
+
+    <div class="menu-row">
+      <div class="item">
+        <img src="images/tea.jpg">
+        <p>tea ₹12</p>
+        <button onclick="addToCart('tea',12)">Add</button>
+      </div>
+
+      <div class="menu-row">
+      <div class="item">
+        <img src="images/vada sambar.jpg">
+        <p>vada sambar ₹35</p>
+        <button onclick="addToCart('vada sambar',35)">Add</button>
+      </div>
+      
+      
+      <div class="item">
+        <img src="images/idli.jpg">
+        <p>Idli ₹30</p>
+        <button onclick="addToCart('Idli',10)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/dosa.jpg">
+        <p>Dosa ₹50</p>
+        <button onclick="addToCart('Special Dosa',50)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/poori.jpg">
+        <p>Poori ₹45</p>
+        <button onclick="addToCart('Poori',15)">Add</button>
+      </div>
+      
+      <div class="item">
+        <img src="images/coffee.jpg">
+        <p>coffee ₹15</p>
+        <button onclick="addToCart('coffee',15)">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LUNCH ================= -->
+  <div class="menu-section">
+    <h2>Lunch</h2>
+
+    <div class="menu-row">
+      <div class="item">
+        <img src="images/meals.jpg">
+        <p>Meals ₹120</p>
+        <button onclick="addToCart('Meals',120)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/biriyani.jpg">
+        <p>chicken Biryani ₹120</p>
+        <button onclick="addToCart('Biryani',120)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/friedrice.jpg">
+        <p>Fried Rice ₹100</p>
+        <button onclick="addToCart('Fried Rice',130)">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DINNER ================= -->
+  <div class="menu-section">
+    <h2>Dinner</h2>
+
+    <div class="menu-row">
+      <div class="item">
+        <img src="images/chapati.jpg">
+        <p>Chapati ₹15</p>
+        <button onclick="addToCart('Chapati',40)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/parotta.jpg">
+        <p>parotta ₹15</p>
+        <button onclick="addToCart('parotta',200)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/egg parotta.jpg">
+        <p>egg parotta ₹120</p>
+        <button onclick="addToCart('egg parotta',120)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/onion dosa.jpg">
+        <p>onion dosa ₹30</p>
+        <button onclick="addToCart('onion dosa',30)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/idiyappam.jpg">
+        <p>idiyappam ₹30</p>
+        <button onclick="addToCart('idiyappam',30)">Add</button>
+      </div>
+    </div>
+  </div>
+<!-- ================= SIDE DISH ================= -->
+ <div class="menu-section">
+    <h2>SIDE DISH</h2>
+    <div class="menu-row">
+    <div class="item">
+        <img src="images/chicken tandoori.jpg">
+        <p>chicken tandoori ₹200</p>
+        <button onclick="addToCart('chicken tandoori',200)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/chicken lollipop.jpg">
+        <p>chicken lollipop ₹100</p>
+        <button onclick="addToCart('chicken lollipo',100)">Add</button>
+      </div>
+     <div class="item">
+        <img src="images/pepper chicken.jpg">
+        <p>pepper chicken ₹105</p>
+        <button onclick="addToCart('pepper chicken',150)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/half boil.jpg">
+        <p>half boil ₹15</p>
+        <button onclick="addToCart('half boil',15)">Add</button>
+      </div>
+
+      <div class="item">
+        <img src="images/omblete.jpg">
+        <p>omblete ₹15</p>
+        <button onclick="addToCart('omblete',15)">Add</button>
+      </div>
+
+</div>
+
+<!-- ================= CART ================= -->
+<h2>Cart</h2>
+<table id="cartTable"></table>
+
+<button class="buy-btn" onclick="buyNow()">Buy Now</button>
+
+<!-- ================= PAYMENT MODAL ================= -->
+<div id="paymentModal">
+  <div class="payment-box">
+    <h2>Scan & Pay</h2>
+    <img src="qr.png">
+    <br><br>
+    <button onclick="paymentSuccess()">Payment Successful</button>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
